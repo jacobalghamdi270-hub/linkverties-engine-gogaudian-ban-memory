@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>System Core | Network Research Utility</title>
+    <style>
+        body { background-color: #0d1117; color: #58a6ff; font-family: 'Segoe UI', sans-serif; text-align: center; padding: 40px; }
+        .container { max-width: 700px; margin: auto; background: #161b22; padding: 30px; border-radius: 15px; border: 1px solid #30363d; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        h1 { color: #238636; text-transform: uppercase; text-shadow: 0 0 10px #238636; }
+        .box { background: #0d1117; border: 1px solid #30363d; padding: 20px; border-radius: 10px; margin: 20px 0; text-align: left; }
+        .btn { background: #238636; color: white; border: none; padding: 15px; border-radius: 5px; cursor: pointer; width: 100%; font-weight: bold; font-size: 1.1em; transition: 0.3s; }
+        .btn:hover { background: #2ea043; box-shadow: 0 0 15px #2ea043; }
+        .status { color: #238636; font-family: monospace; font-size: 0.8em; margin-bottom: 15px; border: 1px solid #238636; display: inline-block; padding: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🛡️ Network Policy Utility</h1>
+        <div class="status">> STATUS: RESEARCH_STATION_ACTIVE</div>
+        
+        <div class="box">
+            <h3>⚡ Method: about:blank Cloaking</h3>
+            <p>This utility opens a secure, unmonitored browser session inside a blank window. Filters often lack permissions to track about:blank pages.</p>
+            <button class="btn" onclick="launchCloaked()">LAUNCH CLOAKED SESSION</button>
+        </div>
+
+        <div class="box">
+            <h3>🛠️ Method: Task Manager Kill</h3>
+            <p>To manually stop the filter process on a Chromebook:</p>
+            <ul>
+                <li>Press <strong>Search + Esc</strong> on your keyboard.</li>
+                <li>Find the <strong>GoGuardian</strong> extension in the list.</li>
+                <li>Rapidly click <strong>End Process</strong>.</li>
+            </ul>
+        </div>
+    </div>
+
+<script>
+function launchCloaked() {
+    var win = window.open('about:blank', '_blank');
+    var url = "https://google.com"; // Change this to the site you want to unblock
+    var iframe = win.document.createElement('iframe');
+    
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.border = "none";
+    iframe.style.position = "fixed";
+    iframe.style.top = "0";
+    iframe.style.left = "0";
+    iframe.src = url;
+    
+    win.document.body.appendChild(iframe);
+}
+</script>
+</body>
+</html>
